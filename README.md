@@ -26,3 +26,5 @@
 > Front-end: Reactjs
 > Back-end: Nodejs
 > Database: MongoDB
+
+Replaced the http://localhost:8000 with the backend render server - https://capstone-project-gmail-clone-backend.onrender.com

@@ -55,7 +55,7 @@ const Register = () => {
         },
         onSubmit: async (values, { setSubmitting, setFieldError, resetForm }) => {
             try {
-                const res = await axios.post('http://localhost:8000/register', values);
+                const res = await axios.post('https://capstone-project-gmail-clone-backend.onrender.com/register', values);
                 if (res.data.success) {
                     alert(res.data.message);
                     resetForm(); // Clear the form
