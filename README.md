@@ -1,70 +1,28 @@
-# Getting Started with Create React App
+### Capstone Project:
 
-This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
+## Gmail Clone:
 
-## Available Scripts
+# Frontend Development:
 
-In the project directory, you can run:
+> Used Material UI and bootstrap for building a dynamic and interactive UI.
+> Created separate components for the login and registration forms.
+> Used React state and Formik to manage form inputs and validation messages. 
+> Utilized React Router for handling client-side routing.
+> Implemented the Context API for state management across the application. 
 
-### `npm start`
+# Backend Development:
 
-Runs the app in the development mode.\
-Open [http://localhost:3000](http://localhost:3000) to view it in your browser.
+> Set up Node.js and Express.js for creating RESTful APIs to handle requests and responses.
+> Used MongoDB for storing and managing tasks, user data, and authentication details.
+> Implement JWT, and Bcrypt for secure access.
+> Integrate middleware for user permissions and role-based access control. (Couldn't complete this part, Though I have added the auth file, I could able to integrate. I had raised query, Since it's weekend no one picked up my query and the deadline is 22/6/2024, I had to submit the task, I definitely workon the middleware integration)
 
-The page will reload when you make changes.\
-You may also see any lint errors in the console.
+# Functionality Development:
 
-### `npm test`
+> Developed a Gmail clone with features including email composition, inbox, sent items, drafts, trash, allmails.
 
-Launches the test runner in the interactive watch mode.\
-See the section about [running tests](https://facebook.github.io/create-react-app/docs/running-tests) for more information.
+# Tech Stacks:
 
-### `npm run build`
-
-Builds the app for production to the `build` folder.\
-It correctly bundles React in production mode and optimizes the build for the best performance.
-
-The build is minified and the filenames include the hashes.\
-Your app is ready to be deployed!
-
-See the section about [deployment](https://facebook.github.io/create-react-app/docs/deployment) for more information.
-
-### `npm run eject`
-
-**Note: this is a one-way operation. Once you `eject`, you can't go back!**
-
-If you aren't satisfied with the build tool and configuration choices, you can `eject` at any time. This command will remove the single build dependency from your project.
-
-Instead, it will copy all the configuration files and the transitive dependencies (webpack, Babel, ESLint, etc) right into your project so you have full control over them. All of the commands except `eject` will still work, but they will point to the copied scripts so you can tweak them. At this point you're on your own.
-
-You don't have to ever use `eject`. The curated feature set is suitable for small and middle deployments, and you shouldn't feel obligated to use this feature. However we understand that this tool wouldn't be useful if you couldn't customize it when you are ready for it.
-
-## Learn More
-
-You can learn more in the [Create React App documentation](https://facebook.github.io/create-react-app/docs/getting-started).
-
-To learn React, check out the [React documentation](https://reactjs.org/).
-
-### Code Splitting
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/code-splitting](https://facebook.github.io/create-react-app/docs/code-splitting)
-
-### Analyzing the Bundle Size
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size](https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size)
-
-### Making a Progressive Web App
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app](https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app)
-
-### Advanced Configuration
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/advanced-configuration](https://facebook.github.io/create-react-app/docs/advanced-configuration)
-
-### Deployment
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/deployment](https://facebook.github.io/create-react-app/docs/deployment)
-
-### `npm run build` fails to minify
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify](https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify)
+> Front-end: Reactjs
+> Back-end: Nodejs
+> Database: MongoDB
