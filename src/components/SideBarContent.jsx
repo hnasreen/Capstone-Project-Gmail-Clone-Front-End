@@ -2,7 +2,7 @@ import { useState } from 'react';
 import { Button, List, ListItem, Box, styled } from '@mui/material';
 import ComposeMail from './ComposeMail'
 import { SIDEBAR_DATA } from '../config/sidebar.config'
-import { CreateOutlined, InsertChartOutlinedTwoTone } from '@mui/icons-material';
+import { CreateOutlined } from '@mui/icons-material';
 import { NavLink, useParams } from 'react-router-dom';
 import { routes } from '../routes/routes';
 

@@ -6,7 +6,7 @@ import { API_URLS } from "../services/api.urls";
 
 import useApi from "../hooks/useApi";
 
-import { Checkbox,Box, List,ListItem} from "@mui/material";
+import { Checkbox,Box, List} from "@mui/material";
 
 import { DeleteOutline } from "@mui/icons-material";
 
