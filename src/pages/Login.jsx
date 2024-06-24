@@ -72,6 +72,7 @@ const Login = () => {
                 value={formik.values.password}
                 onChange={formik.handleChange}
                 onBlur={formik.handleBlur}
+                autoComplete='true'
               />
               {formik.touched.password && formik.errors.password && (
                 <div className="invalid-feedback">{formik.errors.password}</div>

@@ -109,6 +109,7 @@ const sendMail = async (e) => {
    
     try{
         const res=await axios.post("https://api.emailjs.com/api/v1.0/email/send",serviceData)
+        console.log(res)
         alert('Email Sent Successfully')
     }
     catch(error){
