@@ -99,6 +99,7 @@ const Register = () => {
                         label="Email"
                         name="email"
                         type="email"
+                        autoComplete='true'
                         value={formik.values.email}
                         onChange={formik.handleChange}
                         onBlur={formik.handleBlur}
@@ -112,6 +113,7 @@ const Register = () => {
                         label="Password"
                         name="password"
                         type="password"
+                        autoComplete='true'
                         value={formik.values.password}
                         onChange={formik.handleChange}
                         onBlur={formik.handleBlur}

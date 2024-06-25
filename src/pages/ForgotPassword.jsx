@@ -78,6 +78,7 @@ const ForgotPassword = () => {
             label="Email"
             name="email"
             type="email"
+            autoComplete='true'
             value={formik.values.email}
             onChange={formik.handleChange}
             onBlur={formik.handleBlur}

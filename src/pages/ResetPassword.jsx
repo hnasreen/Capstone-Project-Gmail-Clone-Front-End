@@ -67,6 +67,7 @@ const ResetPassword = () => {
             margin="normal"
             label="New Password"
             type="password"
+            autoComplete='true'
             value={password}
             onChange={(e) => setPassword(e.target.value)}
             className="form-control rounded-0"
