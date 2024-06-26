@@ -33,7 +33,7 @@ const Emails = () => {
   const deleteEmailService  = useApi(API_URLS.deleteEmail)
 
   useEffect(() => {
-    getEmailsService.call({}, type)
+    getEmailsService.call({userID:window.localStorage.getItem("userID")}, type)
   }, [type,refreshScreen])
 
   const selectedAllEmails = (e) => {

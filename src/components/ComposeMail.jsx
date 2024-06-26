@@ -70,7 +70,8 @@ const closeComposeMail = (e) => {
         image : "",
         name: 'Nasreen',
         starred : false,
-        type: 'drafts'
+        type: 'drafts',
+        userID:window.localStorage.getItem("userID")
     }
 
     savedDraftService.call(payload);
@@ -125,7 +126,8 @@ const sendMail = async (e) => {
         image : "",
         name: 'Nasreen',
         starred : false,
-        type: 'sent'
+        type: 'sent',
+        userID:window.localStorage.getItem("userID")
     }
 
     sentEmailService.call(payload);

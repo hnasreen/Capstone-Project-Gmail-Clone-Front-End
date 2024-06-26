@@ -5,7 +5,7 @@ const API_URL = 'https://capstone-project-gmail-clone-backend.onrender.com';
 const API_GMAIL = async (urlObject,payload,type) => {
     return await axios ({
         method:urlObject.method,
-        url: `${API_URL}/${urlObject.endpoint}/${type}`,
+        url: `${API_URL}/${urlObject.endpoint}/${type}?userID=${window.localStorage.getItem("userID")}`,
         data:payload
         // headers: {
         //     Authorization: `Bearer ${token}`, // Include Authorization header with token
