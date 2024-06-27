@@ -36,10 +36,11 @@ const ResetPassword = () => {
   const handleSubmit = async (e) => {
     e.preventDefault();
     try {
-      const response = await axios.post(`https://capstone-project-gmail-clone-backend.onrender.com/reset-password/${id}`, { password }, {
+      const response = await axios.post(`http://localhost:8000/reset-password/${id}`, { password }, {
         headers: {
           Authorization: `Bearer ${token}`
-        }
+        },
+        withCredentials:true
       });
 
       if (response.data.success) {

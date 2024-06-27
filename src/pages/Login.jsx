@@ -25,8 +25,9 @@ const Login = () => {
     },
     onSubmit: async (values, { setSubmitting, setFieldError }) => {
       try {
-        const response = await axios.post('https://capstone-project-gmail-clone-backend.onrender.com/login', values);
-        const userId=response.data.user._id
+        const response = await axios.post('http://localhost:8000/login', values,{header:{"content-type":"application/json"},withCredentials:true});
+        console.log(response.data.userId)
+        const userId=response.data.userId
         window.localStorage.setItem("userID",userId)
 
         // Navigate to the inbox page on successful login

@@ -3,7 +3,7 @@ import { AppBar, Toolbar, Box, InputBase, styled, Button } from '@mui/material';
 import { Menu as MenuIcon, Tune, HelpOutlineOutlined, SettingsOutlined, 
     AppsOutlined, AccountCircleOutlined, Search } from '@mui/icons-material';
 import { useNavigate } from 'react-router-dom';
-
+import axios from 'axios';
 import { gmailLogo } from '../constants/constant';
 
 const StyledAppBar = styled(AppBar)({
@@ -55,10 +55,16 @@ const Header = ({ toggleDrawer }) => {
         setShowLogout(!showLogout);
     };
 
-    const handleLogout = () => {
-        // Perform logout logic here (clear session, redirect to login, etc.)
-        // For demonstration, navigate to home page
-        navigate('/');
+    const handleLogout = async() => {
+        try {
+            // Send request to the server to clear the cookie using axios
+            // await axios.post('http://localhost:8000/logout', {}, {header:{"content-type":"application/json"},withCredentials:true});
+
+            // Navigate to home page
+            navigate('/'); // or navigate to '/'
+        } catch (error) {
+            console.error("Logout failed:", error);
+        }
     };
 
     const handleClickOutside = () => {
