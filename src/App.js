@@ -14,7 +14,7 @@ const router = createBrowserRouter(
       <Route path="/" element={<Navigate to={routes.home.path} />} />
 
        {/* Define main route to render Main component with nested routes */}
-      <Route path={routes.main.path} element={<Navigate to={`${routes.emails.path}/inbox`} />} />
+      {/* <Route path={routes.main.path} element={<Navigate to={`${routes.emails.path}/inbox`} />} /> */}
       <Route path={routes.main.path} element={<routes.main.element />}>
         <Route path={`${routes.emails.path}/:type`} element={<routes.emails.element />} errorElement={<ErrorComponent />} />
         <Route path={routes.view.path} element={<routes.view.element />} errorElement={<ErrorComponent />} />
@@ -45,3 +45,5 @@ function App() {
 }
 
 export default App;
+
+

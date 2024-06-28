@@ -58,7 +58,7 @@ const [data, setData] = useState({})
 const sentEmailService = useApi(API_URLS.saveSentEmail);
 const savedDraftService = useApi(API_URLS.saveDraftEmails);
 
-const closeComposeMail = (e) => {
+const closeComposeMail = async(e) => {
     e.preventDefault()
 
     const payload = {
@@ -74,7 +74,7 @@ const closeComposeMail = (e) => {
         userID:window.localStorage.getItem("userID")
     }
 
-    savedDraftService.call(payload);
+    await savedDraftService.call(payload);
 
     if(!savedDraftService.error){
         setOpenDialog(false)
@@ -130,13 +130,40 @@ const sendMail = async (e) => {
         userID:window.localStorage.getItem("userID")
     }
 
-    sentEmailService.call(payload);
+    // const inboxPayload = {
+    //     to: 'hnasreen1993@gmail.com', // Appears as received by the sender
+    //     from: data.to, // Shows the email is from the recipient
+    //     subject: data.subject,
+    //     body: data.body,
+    //     date: new Date(),
+    //     image: "",
+    //     name: 'Nasreen',
+    //     starred: false,
+    //     type: 'inbox', // Mark it as inbox
+    //     userID: window.localStorage.getItem("userID")
+    // };
+
+
+    await sentEmailService.call(payload);
+
+    // Check if there was an error saving the sent email
+    // if (sentEmailService.error) {
+    //     console.error(sentEmailService.error);
+    // }
+
+    // Save to "Inbox"
+    // await sentEmailService.call(inboxPayload);
+
+    // Check if there was an error saving the inbox email
+    // if (sentEmailService.error) {
+    //     console.error(sentEmailService.error);
+    // }
 
     if(!sentEmailService.error){
         setOpenDialog(false)
         setData({})
     } else {
-        
+        console.error(sentEmailService.error);
     }
 
     setOpenDialog(false)
@@ -177,3 +204,4 @@ return (
 }
 
 export default ComposeMail
+

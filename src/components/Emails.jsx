@@ -36,7 +36,7 @@ const Emails = () => {
     getEmailsService.call({userID:window.localStorage.getItem("userID")}, type)
   }, [type,refreshScreen])
 
-  const selectedAllEmails = (e) => {
+  const selectedAllEmails = async(e) => {
     if(e.target.checked){
      const emails = getEmailsService?.response?.map(email=>email._id)
      setSelectedEmails(emails)
@@ -45,11 +45,11 @@ const Emails = () => {
     }
   }
 
-  const deleteSelectedEmails = (e) => {
+  const deleteSelectedEmails = async (e) => {
     if(type === 'bin'){
-      deleteEmailService.call(selectedEmails)
+     await deleteEmailService.call(selectedEmails)
     }else{
-      moveEmailsToBinService.call(selectedEmails);
+      await moveEmailsToBinService.call(selectedEmails);
     }
     setRefreshScreen(prevState => !prevState)
   }

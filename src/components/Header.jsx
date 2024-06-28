@@ -58,7 +58,7 @@ const Header = ({ toggleDrawer }) => {
     const handleLogout = async() => {
         try {
             // Send request to the server to clear the cookie using axios
-            // await axios.post('http://localhost:8000/logout', {}, {header:{"content-type":"application/json"},withCredentials:true});
+            await axios.post('https://capstone-project-gmail-clone-backend.onrender.com/logout', {}, {header:{"content-type":"application/json"},withCredentials:true});
 
             // Navigate to home page
             navigate('/'); // or navigate to '/'

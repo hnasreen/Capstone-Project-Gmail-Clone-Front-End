@@ -48,7 +48,7 @@ const ForgotPassword = () => {
     },
     onSubmit: async (values) => {
       try {
-        const response = await axios.post('http://localhost:8000/forgot-password', values, {header:{"content-type":"application/json"},withCredentials:true});
+        const response = await axios.post('https://capstone-project-gmail-clone-backend.onrender.com/forgot-password', values, {header:{"content-type":"application/json"},withCredentials:true});
         if (response.data.success) {
           alert(response.data.message);
           navigate('/login');

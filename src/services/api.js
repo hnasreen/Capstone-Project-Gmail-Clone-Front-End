@@ -1,6 +1,6 @@
 import axios from 'axios'
 
-const API_URL = 'http://localhost:8000';
+const API_URL = 'https://capstone-project-gmail-clone-backend.onrender.com';
 
 const API_GMAIL = async (urlObject,payload,type) => {
     
@@ -14,4 +14,6 @@ const API_GMAIL = async (urlObject,payload,type) => {
 }
 
 export default API_GMAIL
+
+
 
