@@ -42,8 +42,8 @@ const Email = ({ email, selectedEmails, setRefreshScreen, setSelectedEmails }) =
     const toggleStarredService = useApi(API_URLS.toggleStarredEmail);
     const [isViewed, setIsViewed] = useState(false); // State to track if email is viewed
 
-    const toggleStarredEmails = () => {
-        toggleStarredService.call({ id: email._id, value: !email.starred });
+    const toggleStarredEmails = async () => {
+        await toggleStarredService.call({ id: email._id, value: !email.starred });
         setRefreshScreen(prevState => !prevState);
     };
 

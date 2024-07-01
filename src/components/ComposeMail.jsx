@@ -130,34 +130,7 @@ const sendMail = async (e) => {
         userID:window.localStorage.getItem("userID")
     }
 
-    // const inboxPayload = {
-    //     to: 'hnasreen1993@gmail.com', // Appears as received by the sender
-    //     from: data.to, // Shows the email is from the recipient
-    //     subject: data.subject,
-    //     body: data.body,
-    //     date: new Date(),
-    //     image: "",
-    //     name: 'Nasreen',
-    //     starred: false,
-    //     type: 'inbox', // Mark it as inbox
-    //     userID: window.localStorage.getItem("userID")
-    // };
-
-
     await sentEmailService.call(payload);
-
-    // Check if there was an error saving the sent email
-    // if (sentEmailService.error) {
-    //     console.error(sentEmailService.error);
-    // }
-
-    // Save to "Inbox"
-    // await sentEmailService.call(inboxPayload);
-
-    // Check if there was an error saving the inbox email
-    // if (sentEmailService.error) {
-    //     console.error(sentEmailService.error);
-    // }
 
     if(!sentEmailService.error){
         setOpenDialog(false)
